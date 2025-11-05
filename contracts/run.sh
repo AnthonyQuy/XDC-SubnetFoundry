@@ -111,6 +111,7 @@ interact_with_contract() {
   echo "7. Update member details"
   echo "8. Transfer manager role"
   echo "9. Check if address is a member"
+  echo "10. Update subnet member details"
   echo "0. Return to main menu"
   
   read -p "Select option: " interact_option
@@ -154,6 +155,14 @@ interact_with_contract() {
     9)
       read -p "Enter address to check: " address
       docker exec -it xdc-contract-dev node scripts/interact.js isMember "$address"
+      ;;
+    10)
+      read -p "Enter member address: " address
+      read -p "Enter serial number: " serial
+      read -p "Enter platform version: " platformVersion
+      read -p "Enter host address: " host
+      read -p "Enter port number: " port
+      docker exec -it xdc-contract-dev node scripts/interact.js updateSubnetMemberDetail "$address" "$serial" "$platformVersion" "$host" "$port"
       ;;
     0)
       return

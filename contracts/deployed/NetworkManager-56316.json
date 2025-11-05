@@ -1,8 +1,8 @@
 {
   "contractName": "NetworkManager",
-  "address": "0x23B48De8f3945E8EffD17764B0537Ffc8C835F74",
+  "address": "0x1e6fc9129e14ad8109Bc4573c3c0CA521259eD26",
   "network": "xdc-subnet-56316",
-  "deployedAt": "2025-11-04T04:17:37.419Z",
+  "deployedAt": "2025-11-05T11:40:44.152Z",
   "abi": [
     {
       "inputs": [],
@@ -94,13 +94,33 @@
           "internalType": "bytes",
           "name": "publicKey",
           "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "serial",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint16",
+          "name": "platformVersion",
+          "type": "uint16"
+        },
+        {
+          "internalType": "string",
+          "name": "host",
+          "type": "string"
+        },
+        {
+          "internalType": "uint16",
+          "name": "port",
+          "type": "uint16"
         }
       ],
       "name": "addMember",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function",
-      "signature": "0x1f6949d5"
+      "signature": "0xafafd7cb"
     },
     {
       "inputs": [],
@@ -158,6 +178,26 @@
               "internalType": "uint256",
               "name": "lastUpdated",
               "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "serial",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint16",
+              "name": "platformVersion",
+              "type": "uint16"
+            },
+            {
+              "internalType": "string",
+              "name": "host",
+              "type": "string"
+            },
+            {
+              "internalType": "uint16",
+              "name": "port",
+              "type": "uint16"
             }
           ],
           "internalType": "struct NetworkManager.NodeMember",
@@ -281,6 +321,26 @@
           "internalType": "uint256",
           "name": "lastUpdated",
           "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "serial",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint16",
+          "name": "platformVersion",
+          "type": "uint16"
+        },
+        {
+          "internalType": "string",
+          "name": "host",
+          "type": "string"
+        },
+        {
+          "internalType": "uint16",
+          "name": "port",
+          "type": "uint16"
         }
       ],
       "stateMutability": "view",
@@ -332,13 +392,33 @@
           "internalType": "bytes",
           "name": "publicKey",
           "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "serial",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint16",
+          "name": "platformVersion",
+          "type": "uint16"
+        },
+        {
+          "internalType": "string",
+          "name": "host",
+          "type": "string"
+        },
+        {
+          "internalType": "uint16",
+          "name": "port",
+          "type": "uint16"
         }
       ],
       "name": "updateMemberDetails",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function",
-      "signature": "0x1052430f"
+      "signature": "0xaa9e6192"
     },
     {
       "inputs": [
@@ -358,6 +438,40 @@
       "stateMutability": "nonpayable",
       "type": "function",
       "signature": "0x457873c0"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "memberAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "serial",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint16",
+          "name": "platformVersion",
+          "type": "uint16"
+        },
+        {
+          "internalType": "string",
+          "name": "host",
+          "type": "string"
+        },
+        {
+          "internalType": "uint16",
+          "name": "port",
+          "type": "uint16"
+        }
+      ],
+      "name": "updateSubnetMemberDetail",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xd54595b0"
     }
   ]
 }
