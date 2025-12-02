@@ -7,9 +7,6 @@ PARENTNET_URL=https://erpc.apothem.network/
 # Deployment Private Keys (These are examples, use your actual keys in production)
 SUBNET_PK=0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
 
-# Gas Configuration
-GAS_PRICE=10000000000  # 10 Gwei
-GAS_LIMIT=4700000
-
-# Network Configuration
-NETWORK_ID=551        # XDC Subnet ID
+# Note: Chain ID is automatically loaded from ../subnet/genesis.json
+# This ensures a single source of truth for network configuration
+debug=true

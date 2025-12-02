@@ -1,0 +1,33 @@
+
+node_modules/
+
+# Environment files (handled by docker-compose)
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Git files
+.git/
+.gitignore
+.gitattributes
+
+# Documentation (not needed in container)
+README.md
+USAGE.md
+*.md
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+.cache/

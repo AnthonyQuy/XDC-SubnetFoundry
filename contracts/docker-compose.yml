@@ -7,17 +7,23 @@ services:
       dockerfile: Dockerfile
     container_name: xdc-contract-dev
     volumes:
-      - ./source:/app/source
-      - ./compiled:/app/compiled
-      - ./deployed:/app/deployed
+      - ./contracts:/app/contracts
+      - ./compile:/app/compile
       - ./scripts:/app/scripts
-      - ./hardhat.config.js:/app/hardhat.config.js
+      
+      - ./ignition:/app/ignition
+      - ./test:/app/test
+
+      # Configuration files
+      - ./hardhat.config.ts:/app/hardhat.config.ts
+      
+      - ./tsconfig.json:/app/tsconfig.json
+      - ../subnet/genesis.json:/subnet/genesis.json:ro
     env_file:
       - ./.env
     environment:
-      - SUBNET_URL=http://192.168.25.11:8545
-      - SUBNET_PK=0x55dacfb3561910fbe1cad5abbaa75d3fe7a5674ae3d6bab3f32a53a5eca4adc1
-      - NETWORK_ID=56316
+      - SUBNET_URL=${SUBNET_URL:-http://192.168.25.11:8545}
+      - NETWORK_ID=${NETWORK_ID:-56316}
     networks:
       - xdc_subnet_network
     entrypoint: ["bash", "-c", "tail -f /dev/null"]
