@@ -22,10 +22,10 @@ const AddMemberForm: React.FC<AddMemberFormProps> = ({ onAddMember, loading }) =
   const [formData, setFormData] = useState<FormState>({
     address: "",
     x500Name: "",
-    certSerialHex: "0x1732382838913",
-    platformVersion: "12",
-    host: "contour.p2p.app.contournetwork.io",
-    port: "10030",
+    certSerialHex: "",
+    platformVersion: "",
+    host: "",
+    port: "",
   });
   const [validated, setValidated] = useState(false);
   const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
